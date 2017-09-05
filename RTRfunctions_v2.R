@@ -301,7 +301,7 @@ rtr.bias.map<-function(sp1,sp2,bios,iter,plot=TRUE){
   projection(r)<-projection(bios[[1]])
   values(r)<-0
   r[which(is.na(values(bios[[1]])))]<-NA
-  r[rtr_bias(sp1,sp2,bios[[1]])]<-1
+  r[rtr.bias(sp1,sp2,bios[[1]])]<-1
   r3<-r
   for(i in 1:iter){
     cat(paste('',i,'-RUN  ',sep=''))
