@@ -306,7 +306,7 @@ rtr.bias.map<-function(sp1,sp2,bios,iter,plot=TRUE){
   for(i in 1:iter){
     cat(paste('',i,'-RUN  ',sep=''))
     values(r)<-0
-    r[rtr_bias(sp1,sp2,bios[[1]])]<-1
+    r[rtr.bias(sp1,sp2,bios[[1]])]<-1
     r2<-r
     r3<-mosaic(r3,r2,fun=sum)
     removeTmpFiles(1) #remove temp files from 1 hour ago - to save memory
